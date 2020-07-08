@@ -23,7 +23,7 @@ $(document).ready(function () {
 		$(".leaflet-popup").remove();
 		$(".leaflet-pane.leaflet-shadow-pane").remove();
 
-		Object.keys(jsonWeather).forEach(city_name => {			
+		Object.keys(jsonWeather).forEach(city_name => {
 			if (jsonWeather[city_name].temp > temp-10 && jsonWeather[city_name].temp < temp+10) {
 				marker = L.marker([jsonWeather[city_name].lat, jsonWeather[city_name].long]);
 				marker.addTo(mymap);
