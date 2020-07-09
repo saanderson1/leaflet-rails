@@ -2,7 +2,7 @@
 FROM ruby:2.6.6
 
 # Install rails dependencies and working directory
-RUN apt-get update -qq && apt-get install -y nodejs yarn postgresql-client
+RUN apt-get update -qq && apt-get install -y vim nodejs yarn postgresql-client
 RUN mkdir /leaflet_app
 WORKDIR /leaflet_app
 
