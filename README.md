@@ -8,5 +8,10 @@
   - Once cloned, run `bundle install`.
     - Note: You may need to install `Ruby 2.6.6` and `Rails 6.0.2`. Follow the installation instructions for Ruby [HERE](https://www.ruby-lang.org/en/documentation/installation/) and Rails [HERE](https://guides.rubyonrails.org/v5.0/getting_started.html).
   - You'll need an Open Weather Map API key from [HERE](https://openweathermap.org/guide).
-  - Run `figaro install` and add `OWM_API: "your key here"` to the provided `config/application.yml`.
-  - Run `rails server` and head over to `localhost:3000` to see the app.
+  - Follow instructions [HERE](https://guides.rubyonrails.org/security.html#environmental-security) to secure the OWM API key using Rails' built in environment variable store.
+
+# Launching the application
+  - Once the application is pulled and all application specific items are installed locally, you'll need to set up Docker following [THESE](https://docs.docker.com/get-started/) instructions.
+  - Once Docker is installed locally, head to the terminal and enter:
+    `docker-compose up --build` which will build the application then launch it from the image at `localhost:3000` that can be accessed from a browser.
+  
