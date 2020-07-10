@@ -14,4 +14,5 @@
   - Once the application is pulled and all application specific items are installed locally, you'll need to set up Docker following [THESE](https://docs.docker.com/get-started/) instructions.
   - Once Docker is installed locally, head to the terminal and enter:
     `docker-compose up --build` which will build the application then launch it from the image at `localhost:3000` that can be accessed from a browser.
-  
+
+  - Run `rails server` and head over to `localhost:3000` to see the app.
