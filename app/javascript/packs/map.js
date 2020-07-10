@@ -13,7 +13,7 @@ $(document).ready(function () {
 			zoomOffset: -1,
 			accessToken: 'pk.eyJ1Ijoic3RldmVuYWFuZGVyc29uMjAxMiIsImEiOiJja2J1YncxOTIwaWR5MzRtaWdsNWgxajF1In0.O4XNyHXkLnx3fs1jARRbeQ'
 	}).addTo(mymap);
-	
+
 	// Checks is the state_id is not 0(defualt page).
 	//   If the state id isn't 0, it prefetches the weather for that state
 	//     Weather is cached in Rails on a 3 hour refresh
