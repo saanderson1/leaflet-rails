@@ -22,7 +22,7 @@ $(document).ready(function () {
 		//  to Open Weather Map API on a 3 hour cache
 		$.get('/weather', {state_id}, function(response, status){
 			weather = response.data			
-		})
+		});
 	}
 
 	// Waits for a change related to the data-js-search id in index.html.erb
