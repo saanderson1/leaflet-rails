@@ -31,7 +31,7 @@ class WeatherService
       faraday.use Faraday::HttpCache, store: Rails.cache
       faraday.adapter Faraday.default_adapter
 
-      faraday.params['appid'] = Rails.application.credentials.owm[:api_key]
+      faraday.params['appid'] = Figaro.env.owm_api
       faraday.params['lat'] = @lat
       faraday.params['lon'] = @long
       faraday.params['cnt'] = 50
