@@ -26,7 +26,7 @@ $(document).ready(function () {
 	}
 
 	// Waits for a change related to the data-js-search id in index.html.erb
-  $('[data-js-search]').submit(function (event) {
+  $('[data-js-search]').change(function (event) {
 		//grabs the temp and the weather 
 		temp = parseInt($(this).val(), 10);
 		jsonWeather = JSON.parse(weather)
