@@ -10,7 +10,6 @@ development:
   <<: *default
   database: leaflet_rails_development
 
-
 test:
   <<: *default
   database: leaflet_rails_test

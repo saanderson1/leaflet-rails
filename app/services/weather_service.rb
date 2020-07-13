@@ -12,7 +12,7 @@ class WeatherService
     json = JSON.parse(response.body)
     hash_response = hash_weather(json['list'])
   end
-  
+
   def hash_weather(json_response)
     json_response.inject({}) do |new_hash, city|
       new_hash[city['name']] = {}
@@ -23,9 +23,9 @@ class WeatherService
       new_hash
     end
   end
-  
+
   private
-  
+
   def connection
     connection = Faraday.new(url: 'https://api.openweathermap.org') do |faraday|
       faraday.use Faraday::HttpCache, store: Rails.cache
