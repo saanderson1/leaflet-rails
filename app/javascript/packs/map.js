@@ -3,7 +3,6 @@ $(document).ready(function () {
 	// Sets global variable that is used to determine which state to look closer at
 	//   Default is the whole US: 37.94, -98.31, 4
 	var mymap = L.map('map').setView([state_lat, state_lng], state_zoom);
-
 	// Uses a MapBox/OpenStreetMap map tile layer to show visuals on the map
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
 			attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -40,7 +39,7 @@ $(document).ready(function () {
 		//   Uses that city name to check data in the API response and place markers
 		//     Places markers if the city current temperature is within 10 of the input temp
 		Object.keys(jsonWeather).forEach(city_name => {			
-			if (jsonWeather[city_name].temp > temp-10 && jsonWeather[city_name].temp < temp+10) {
+			if (jsonWeather[city_name].temp > temp-5 && jsonWeather[city_name].temp < temp+5) {
 				marker = L.marker([jsonWeather[city_name].lat, jsonWeather[city_name].long]);
 				marker.addTo(mymap);
 				marker.bindPopup(`<b>Current Temp:</b> ${jsonWeather[city_name].temp}<br /><b>City Name:</b> ${jsonWeather[city_name].name}`);
